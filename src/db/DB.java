@@ -12,7 +12,8 @@ import java.util.Properties;
 public class DB {
 
 	private static Connection conn = null;
-
+	
+	//pegando os dados que contem no arquivo
 	public static  Connection getConnection() {
 		if( conn == null) {
 			
@@ -42,7 +43,8 @@ public class DB {
 		}
 	}
 	
-
+	
+	//Accessar ao arquivo que contem dados 
 	private static Properties loadProperties() {
 
 		try (FileInputStream fs = new FileInputStream("db.properties")) {
